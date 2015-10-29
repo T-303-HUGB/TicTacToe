@@ -9,8 +9,11 @@ public class TicTacToeTest {
       org.junit.runner.JUnitCore.main("is.ru.tictactoe.TicTacToeTest");
     }
 
-	@Test
-	public void testEmptyString() {
-		assertEquals(0, Calculator.add(""));
-	}
+    @Test
+    public void testWhichTurnItIs(){
+        TicTacToe game = new TicTacToe();
+
+        // player 1 should start
+        assertEquals(1, game.WhichTurn());
+    }
 }
