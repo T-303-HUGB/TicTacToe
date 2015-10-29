@@ -21,11 +21,32 @@ public class TicTacToe {
 	}
 
 	public static void printBoard() {
+		//system.out.println("-------------");
+
 		for(int i = 0; i < 3; i++) {
+			//System.print.out("| ");
+
 			for(int j = 0; j < 3; j++) {
-				//system.out.print(board[i][j] + " ");
+				//system.out.print(board[i][j] + " | ");
 			}
 			//system.out.println();
+			//system.out.println();
+			//system.out.println("-------------");
 		}
 	}		
+
+
+	public boolean isBoardFull() {
+		boolean full = true;
+
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				
+				if(board[i][j] == '-'){
+					full = false;
+				}
+			}
+		}
+		return full;
+	}
 }
