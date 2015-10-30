@@ -1,9 +1,23 @@
 package is.ru.tictactoe;
 
 public class Player {
+	private int numberOfWins;
+	private String name;
 
-	public static char[][] setBoard() {
-		char board[][]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
-		return board;
+	public Player(String name) {
+		this.name = name;
+		numberOfWins = 0;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getNumberOfWins() {
+		return numberOfWins;
+	}
+
+	public void playerWon() {
+		numberOfWins++;
 	}
 }
