@@ -1,0 +1,4 @@
+language: java
+
+jdk:
+	- jdk1.8.0_60
