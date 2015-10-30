@@ -1,40 +1,38 @@
 package is.ru.tictactoe;
 
+import static java.lang.System.out;
+
 public class TicTacToe {
 
 	private char[][] board;
 	private Player player1, player2;
+	private Player currentPlayer;
 
 	public TicTacToe() {
 		board = new char[3][3];
-		//player1 = new HumanPlayer();
-		//player2 = new HumanPlayer();
-		initializeBoard();
-	}
-
-	public static void initializeBoard() {
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
-				//board[i][j] = '-';
-			}
-		}
+		player1 = new Player("Player 1");
+		player2 = new Player("Player 2");
+		currentPlayer = player1;
 	}
 
 	public static void printBoard() {
-		//system.out.println("-------------");
+		System.out.println("-------------");
 
 		for(int i = 0; i < 3; i++) {
-			//System.print.out("| ");
+			System.out.println("| ");
 
 			for(int j = 0; j < 3; j++) {
-				//system.out.print(board[i][j] + " | ");
-			}
-			//system.out.println();
-			//system.out.println();
-			//system.out.println("-------------");
-		}
-	}		
+					System.out.print("  ");
 
+				if(j < 3) {
+					System.out.println(" | ");
+				}
+			}
+		}
+		
+		System.out.println("------");
+	}
+		
 
 	public boolean isBoardFull() {
 		boolean full = true;
@@ -48,5 +46,9 @@ public class TicTacToe {
 			}
 		}
 		return full;
+	}
+
+	public String WhoseTurnIsIt() {
+		return currentPlayer.getName();
 	}
 }

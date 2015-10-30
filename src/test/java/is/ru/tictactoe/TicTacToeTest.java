@@ -10,10 +10,10 @@ public class TicTacToeTest {
     }
 
     @Test
-    public void testWhichTurnItIs(){
+    public void WhoseTurnItIsTest(){
         TicTacToe game = new TicTacToe();
 
         // player 1 should start
-        //assertEquals(1, game.WhichTurn());
+        assertEquals("Player 1", game.WhoseTurnIsIt());
     }
 }
