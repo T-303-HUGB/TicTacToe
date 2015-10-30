@@ -4,33 +4,42 @@ import static java.lang.System.out;
 
 public class TicTacToe {
 
-	private char[][] board;
+	private static char[][] board;
 	private Player player1, player2;
 	private Player currentPlayer;
 
 	public TicTacToe() {
 		board = new char[3][3];
+		clearBoard();
+
 		player1 = new Player("Player 1");
 		player2 = new Player("Player 2");
 		currentPlayer = player1;
 	}
 
-	public static void printBoard() {
-		System.out.println("-------------");
-
+	private void clearBoard() {
 		for(int i = 0; i < 3; i++) {
-			System.out.println("| ");
-
 			for(int j = 0; j < 3; j++) {
-					System.out.print("  ");
-
-				if(j < 3) {
-					System.out.println(" | ");
-				}
+				board[i][j] = ' ';
 			}
 		}
-		
-		System.out.println("------");
+	}
+
+	public static void printBoard() {
+		System.out.println();
+
+		for(int i = 0; i < 3; i++) {
+			System.out.print(" |");
+
+			for(int j = 0; j < 3; j++) {
+					System.out.print(board[i][j]);
+
+				if(j < 3) {
+					System.out.print("|");
+				}
+			}
+			System.out.println();
+		}
 	}
 		
 
