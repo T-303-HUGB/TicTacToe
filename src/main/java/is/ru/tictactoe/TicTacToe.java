@@ -1,5 +1,7 @@
 package is.ru.tictactoe;
 
+import static java.lang.System.out;
+
 public class TicTacToe {
 
 	private char[][] board;
@@ -9,29 +11,20 @@ public class TicTacToe {
 		board = new char[3][3];
 		//player1 = new HumanPlayer();
 		//player2 = new HumanPlayer();
-		initializeBoard();
-	}
-
-	public static void initializeBoard() {
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
-				//board[i][j] = '-';
-			}
-		}
 	}
 
 	public static void printBoard() {
-		//system.out.println("-------------");
+		System.out.println("-------------");
 
 		for(int i = 0; i < 3; i++) {
-			//System.print.out("| ");
+			System.out.println("| ");
 
 			for(int j = 0; j < 3; j++) {
-				//system.out.print(board[i][j] + " | ");
+				//System.out.print(board[i][j] + " | ");
 			}
-			//system.out.println();
-			//system.out.println();
-			//system.out.println("-------------");
+			System.out.println();
+			System.out.println();
+			System.out.println("-------------");
 		}
 	}		
 
