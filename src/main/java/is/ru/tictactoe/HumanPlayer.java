@@ -1,10 +1,14 @@
 package is.ru.tictactoe;
 
-public class HumanPlayer {
+public class HumanPlayer extends Player {
 
-	public static char[][] setBoard() {
-		char board[][]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
-		return board;
+	public Coordinates getMove() {
+		Scanner input = new Scanner(System.in);
+		int x = input.nextInt();
+		int y = input.nextInt();
+
+		Coordinates coords = new Coordinates(x, y);
+
+		return coords;
 	}
-
 }

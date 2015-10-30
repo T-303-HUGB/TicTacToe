@@ -22,20 +22,4 @@ public class CoordinatesTest {
 
     	assertEquals(2, coord.y());
     }
-
-    @Test
-    public void CoordinatesEqualsTest() {
-    	Coordinates coord = new Coordinates(1,1);
-    	Coordinates coord2 = new Coordinates(1,1);
-
-    	assertEquals(true, coord.equals(coord2));
-    }
-
-    @Test
-    public void CoordinatesNotEqualsTest() {
-    	Coordinates coord = new Coordinates(1,1);
-    	Coordinates coord2 = new Coordinates(2,2);
-
-    	assertEquals(false, coord.equals(coord2));
-    }
 }

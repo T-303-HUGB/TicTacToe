@@ -24,13 +24,6 @@ public class Player {
 	}
 
 	public Coordinates getMove() {
-		Scanner input = new Scanner(System.in);
-		int x = 1;//input.nextInt();
-		int y = 1;//input.nextInt();
-
-		Coordinates coords = new Coordinates(x, y);
-
-		return coords;
+		return null;
 	}
-
 }
