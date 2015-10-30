@@ -2,9 +2,9 @@ package is.ru.tictactoe;
 
 public class Game {
 
-	public static char[][] setBoard() {
-		char board[][]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
-		return board;
-	}
+	public static void main(String[] args) {
+		TicTacToe game = new TicTacToe();
 
+		game.printBoard();
+	}
 }

@@ -6,11 +6,13 @@ public class TicTacToe {
 
 	private char[][] board;
 	private Player player1, player2;
+	private Player currentPlayer;
 
 	public TicTacToe() {
 		board = new char[3][3];
-		//player1 = new HumanPlayer();
-		//player2 = new HumanPlayer();
+		player1 = new Player("Player 1");
+		player2 = new Player("Player 2");
+		currentPlayer = player1;
 	}
 
 	public static void printBoard() {
@@ -20,14 +22,17 @@ public class TicTacToe {
 			System.out.println("| ");
 
 			for(int j = 0; j < 3; j++) {
-				//System.out.print(board[i][j] + " | ");
-			}
-			System.out.println();
-			System.out.println();
-			System.out.println("-------------");
-		}
-	}		
+					System.out.print("  ");
 
+				if(j < 3) {
+					System.out.println(" | ");
+				}
+			}
+		}
+		
+		System.out.println("------");
+	}
+		
 
 	public boolean isBoardFull() {
 		boolean full = true;
@@ -41,5 +46,9 @@ public class TicTacToe {
 			}
 		}
 		return full;
+	}
+
+	public String WhoseTurnIsIt() {
+		return currentPlayer.getName();
 	}
 }
