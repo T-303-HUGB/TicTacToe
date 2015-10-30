@@ -1,6 +1,12 @@
 package is.ru.tictactoe;
 
+import java.util.Scanner;
+
 public class HumanPlayer extends Player {
+
+	public HumanPlayer(String name) {
+		super(name);
+	}
 
 	public Coordinates getMove() {
 		Scanner input = new Scanner(System.in);

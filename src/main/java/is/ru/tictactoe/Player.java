@@ -1,10 +1,12 @@
 package is.ru.tictactoe;
 
-import java.util.Scanner;
-
 public class Player {
-	private int numberOfWins;
-	private String name;
+	protected int numberOfWins;
+	protected String name;
+
+	public Player() {
+		
+	}
 
 	public Player(String name) {
 		this.name = name;
