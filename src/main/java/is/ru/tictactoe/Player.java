@@ -1,8 +1,12 @@
 package is.ru.tictactoe;
 
 public class Player {
-	private int numberOfWins;
-	private String name;
+	protected int numberOfWins;
+	protected String name;
+
+	public Player() {
+		
+	}
 
 	public Player(String name) {
 		this.name = name;
@@ -19,5 +23,9 @@ public class Player {
 
 	public void playerWon() {
 		numberOfWins++;
+	}
+
+	public Coordinates getMove() {
+		return null;
 	}
 }
