@@ -112,10 +112,6 @@ public class TicTacToe {
 	public int checkForWin() {
 		int status = 0;
 
-		if(isBoardFull()) {
-			return 3;
-		}
-
 		status = checkHorizontal();
 
 		if(status != 0) {
@@ -130,6 +126,12 @@ public class TicTacToe {
 		}
 		else {
 			status = checkDiagonal();
+		}
+
+		// if no one won we check if the board is full
+		// then there is a tie
+		if(status == 0 && isBoardFull()) {
+			return 3;
 		}
 
 		return status;
