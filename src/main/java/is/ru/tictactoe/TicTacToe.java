@@ -52,18 +52,17 @@ public class TicTacToe {
 	}
 		
 
-	public boolean isBoardFull() {
-		boolean full = true;
+	private boolean isBoardFull() {
 
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
+		for(int x = 0; x < 3; x++) {
+			for(int y = 0; y < 3; y++) {
 				
-				if(board[i][j] == '-'){
-					full = false;
+				if(board[x][y] == ' '){
+					return false;
 				}
 			}
 		}
-		return full;
+		return true;
 	}
 
 	public String WhoseTurnIsIt() {
@@ -92,5 +91,20 @@ public class TicTacToe {
 		 else {
 		 	currentPlayer = player1;
 		 }
+	}
+
+
+	// return 0 for no win
+	// return 1 for player1 won
+	// return 2 for plauer2 won
+	// return 3 for tie
+	public int checkForWin() {
+		int status = 0;
+
+		if(isBoardFull()) {
+			return 3;
+		}
+
+		return status;
 	}
 }
