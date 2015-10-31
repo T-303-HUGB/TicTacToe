@@ -105,6 +105,27 @@ public class TicTacToe {
 			return 3;
 		}
 
+		status = checkHorizontal();
+
 		return status;
+	}
+
+
+	private int checkHorizontal() {
+
+		for(int x = 0; x < 3; x++) {
+			if(board[x][0] == board[x][1] && board[x][1] == board[x][2]) {
+				if(board[x][0] != ' ') {
+					if(board[x][0] == 'x') {
+						return 1;
+					}
+					else {
+						return 2;
+					}
+				}
+			}
+		}
+
+		return 0;
 	}
 }
