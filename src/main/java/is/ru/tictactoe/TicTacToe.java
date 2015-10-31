@@ -107,6 +107,13 @@ public class TicTacToe {
 
 		status = checkHorizontal();
 
+		if(status != 0) {
+			return status;
+		}
+		else {
+			status = checkVertical();
+		}
+
 		return status;
 	}
 
@@ -117,6 +124,24 @@ public class TicTacToe {
 			if(board[x][0] == board[x][1] && board[x][1] == board[x][2]) {
 				if(board[x][0] != ' ') {
 					if(board[x][0] == 'x') {
+						return 1;
+					}
+					else {
+						return 2;
+					}
+				}
+			}
+		}
+
+		return 0;
+	}
+
+	private int checkVertical() {
+
+		for(int y = 0; y < 3; y++) {
+			if(board[0][y] == board[1][y] && board[1][y] == board[2][y]) {
+				if(board[0][y] != ' ') {
+					if(board[0][y] == 'x') {
 						return 1;
 					}
 					else {

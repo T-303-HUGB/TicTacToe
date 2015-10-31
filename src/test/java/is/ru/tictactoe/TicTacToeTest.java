@@ -76,4 +76,23 @@ public class TicTacToeTest {
 
         assertEquals(1, game.checkForWin());
     }
+
+    @Test 
+    public void checkVerticalTest() {
+        TicTacToe game = new TicTacToe();
+        Coordinates coord = new Coordinates(0,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(0,1);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(1,1);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,2);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,1);
+        game.playersTurn(coord);
+
+        assertEquals(2, game.checkForWin());
+    }
 }
