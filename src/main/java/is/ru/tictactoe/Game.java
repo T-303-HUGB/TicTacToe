@@ -15,6 +15,7 @@ public class Game {
 
 		while(true) {
 			game.printBoard();
+			System.out.println(game.WhoseTurnIsIt() + " it's your turn!");
 			Player player = game.getCurrentPlayer();
 			Coordinates coords = player.getMove(game.getBoard());
 			game.playersTurn(coords);
