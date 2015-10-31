@@ -1,5 +1,7 @@
 package is.ru.tictactoe;
 
+import java.util.Random;
+
 public class ComputerPlayer extends Player {
 
 	public ComputerPlayer(String name, char marker) {
@@ -7,13 +9,19 @@ public class ComputerPlayer extends Player {
 	}
 
 	public Coordinates getMove(char[][] board) {
-		Coordinates invalidMove = new Coordinates(3,3);
+		//Coordinates invalidMove = new Coordinates(3,3);
 
-		if(checkHorizontal(board) != invalidMove) {
+		/*if(checkHorizontal(board) != invalidMove) {
 			return checkHorizontal(board);
-		}
+		}*/
 
-		return invalidMove;
+		Random rand = new Random();
+		int  n = rand.nextInt(2);
+		int b = rand.nextInt(2);
+
+		Coordinates move = new Coordinates(n,b);
+
+		return move;
 	}
 
 	public Coordinates checkHorizontal(char[][] board) {
