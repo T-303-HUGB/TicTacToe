@@ -35,14 +35,26 @@ public class Game {
 			}
 		}
 
-		while(true) {
+		int win = 0;
+		while(win == 0) {
 			game.printBoard();
 			System.out.println(game.WhoseTurnIsIt() + " it's your turn!");
 			Player player = game.getCurrentPlayer();
-			System.out.println(game.WhoseTurnIsIt() + " It's your turn ");
 			Coordinates coords = player.getMove(game.getBoard());
 			game.playersTurn(coords);
+			win = game.checkForWin();
 		}
+
+		if(win == 1) {
+			System.out.println("Player1 won");
+		}
+		else if(win == 2) {
+			System.out.println("Player2 won");
+		}
+		else if(win == 3) {
+			System.out.println("Sorry there was no winner");
+		}
+		
 		
 	}
 }
