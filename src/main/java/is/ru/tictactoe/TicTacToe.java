@@ -114,11 +114,36 @@ public class TicTacToe {
 			status = checkVertical();
 		}
 
+		if(status != 0) {
+			return status;
+		}
+		else {
+			status = checkDiagonal();
+		}
+
 		return status;
 	}
 
 
 	private int checkHorizontal() {
+
+		for(int y = 0; y < 3; y++) {
+			if(board[0][y] == board[1][y] && board[1][y] == board[2][y]) {
+				if(board[0][y] != ' ') {
+					if(board[0][y] == 'x') {
+						return 1;
+					}
+					else {
+						return 2;
+					}
+				}
+			}
+		}
+
+		return 0;
+	}
+
+	private int checkVertical() {
 
 		for(int x = 0; x < 3; x++) {
 			if(board[x][0] == board[x][1] && board[x][1] == board[x][2]) {
@@ -136,18 +161,27 @@ public class TicTacToe {
 		return 0;
 	}
 
-	private int checkVertical() {
+	private int checkDiagonal() {
 
-		for(int y = 0; y < 3; y++) {
-			if(board[0][y] == board[1][y] && board[1][y] == board[2][y]) {
-				if(board[0][y] != ' ') {
-					if(board[0][y] == 'x') {
+		if(board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+			if(board[0][0] != ' ') {
+					if(board[0][0] == 'x') {
 						return 1;
 					}
 					else {
 						return 2;
 					}
-				}
+			}
+		}
+
+		if(board[2][0] == board[1][1] && board[1][1] == board[0][2]) {
+			if(board[2][0] != ' ') {
+					if(board[2][0] == 'x') {
+						return 1;
+					}
+					else {
+						return 2;
+					}
 			}
 		}
 

@@ -95,4 +95,67 @@ public class TicTacToeTest {
 
         assertEquals(2, game.checkForWin());
     }
+
+    @Test
+    public void checkDiagonalTest() {
+        TicTacToe game = new TicTacToe();
+        Coordinates coord = new Coordinates(0,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(0,1);
+        game.playersTurn(coord);
+        coord = new Coordinates(1,1);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,2);
+        game.playersTurn(coord);
+        coord = new Coordinates(0,2);
+        game.playersTurn(coord);
+
+        assertEquals(2, game.checkForWin());
+    }
+
+    @Test
+    public void checkForNoWin() {
+        TicTacToe game = new TicTacToe();
+        Coordinates coord = new Coordinates(0,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(1,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(0,1);
+        game.playersTurn(coord);
+        coord = new Coordinates(0,2);
+        game.playersTurn(coord);
+        coord = new Coordinates(1,1);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,2);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,1);
+        game.playersTurn(coord);
+
+        assertEquals(2, game.checkForWin());
+    }
+
+    @Test
+    public void checkForNoWin2() {
+        TicTacToe game = new TicTacToe();
+        Coordinates coord = new Coordinates(2,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(0,0);
+        game.playersTurn(coord);
+        coord = new Coordinates(0,1);
+        game.playersTurn(coord);
+        coord = new Coordinates(1,1);
+        game.playersTurn(coord);
+        coord = new Coordinates(0,2);
+        game.playersTurn(coord);
+        coord = new Coordinates(1,2);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,2);
+        game.playersTurn(coord);
+
+        assertEquals(0, game.checkForWin());
+    }
 }
