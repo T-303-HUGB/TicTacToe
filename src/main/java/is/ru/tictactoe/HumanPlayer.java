@@ -14,16 +14,23 @@ public class HumanPlayer extends Player {
 		int y;
 
 		while(true) {
+			System.out.print("Pick a row: ");
 			x = input.nextInt();
+			System.out.print("Pick a column: ");
 			y = input.nextInt();
+			x--;
+			y--;
 
-			if(board[x][y] == ' ') {
+			if(x < 0 || x > 2 || y < 0 || y > 2) {
+				System.out.println("Invalid input, try again");
+			}
+			else if(board[x][y] == ' ') {
 				board[x][y] = marker;
 				break;
 			}
-			else {
-				// write out invalid input
-				// try again
+			else if(board[x][y] != ' ') {
+				System.out.println("Location is already taken, try again");
+				//try again
 			}
 		}
 

@@ -16,4 +16,13 @@ public class TicTacToeTest {
         // player 1 should start
         assertEquals("Player 1", game.WhoseTurnIsIt());
     }
+
+    @Test
+    public void switchPlayer() {
+        TicTacToe game = new TicTacToe();
+        Coordinates coord = new Coordinates(1,1);
+        game.playersTurn(coord);
+
+        assertEquals("Player 2", game.WhoseTurnIsIt());
+    }
 }

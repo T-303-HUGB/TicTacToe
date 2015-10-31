@@ -41,4 +41,5 @@ public class PlayerTest {
 
     	assertEquals(3, P1.getNumberOfWins());
     }
+
 }
