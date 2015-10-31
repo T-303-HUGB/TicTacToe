@@ -5,6 +5,10 @@ public class Game {
 	public static void main(String[] args) {
 		TicTacToe game = new TicTacToe();
 
-		game.printBoard();
+		while(true) {
+			game.printBoard();
+			game.playersTurn();
+		}
+		
 	}
 }

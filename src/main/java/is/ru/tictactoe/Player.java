@@ -3,13 +3,15 @@ package is.ru.tictactoe;
 public class Player {
 	protected int numberOfWins;
 	protected String name;
+	protected char marker;
 
 	public Player() {
 		
 	}
 
-	public Player(String name) {
+	public Player(String name, char marker) {
 		this.name = name;
+		this.marker = marker;
 		numberOfWins = 0;
 	}
 
@@ -25,7 +27,7 @@ public class Player {
 		numberOfWins++;
 	}
 
-	public Coordinates getMove() {
+	public Coordinates getMove(char[][] board) {
 		return null;
 	}
 }

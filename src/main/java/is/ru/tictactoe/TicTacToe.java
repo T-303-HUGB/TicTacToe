@@ -12,8 +12,8 @@ public class TicTacToe {
 		board = new char[3][3];
 		clearBoard();
 
-		player1 = new Player("Player 1");
-		player2 = new Player("Player 2");
+		player1 = new HumanPlayer("Player 1", 'O');
+		player2 = new HumanPlayer("Player 2", 'X');
 		currentPlayer = player1;
 	}
 
@@ -59,5 +59,13 @@ public class TicTacToe {
 
 	public String WhoseTurnIsIt() {
 		return currentPlayer.getName();
+	}
+
+
+	public void playersTurn() {
+
+		 Coordinates coords = currentPlayer.getMove(board);
+
+		 board[coords.x()][coords.y()] = 'X';
 	}
 }

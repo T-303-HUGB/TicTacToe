@@ -11,7 +11,7 @@ public class HumanPlayerTest {
 
     @Test
     public void getNameTest() {
-    	HumanPlayer P1 = new HumanPlayer("Steve");
+    	HumanPlayer P1 = new HumanPlayer("Steve", 'X');
 
     	assertEquals("Steve", P1.getName());
     }
