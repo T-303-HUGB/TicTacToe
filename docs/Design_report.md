@@ -12,64 +12,64 @@ The game will be coded using Sublime Text and github will be used as source cont
 A single tab should be used as the unit of indentation.
 
 ### 2. Comments
-Block comments should be preceded by a single blank space and follow the following syntax:
-/* Some very important
-comment here */
+Block comments should be preceded by a single blank space and follow the following syntax:  
+	/* Some very important  
+	comment here */  
 
-Single-line comments should have the following form:
-	//this is a single-line comment
+Single-line comments should have the following form:  
+	//this is a single-line comment  
 
 ### 3. Declarations
-Single line declarations are preferred but variables declared in the same line can also be used example:
-int variable1;
-int variable2;
-or
-int variable1, variable2;
+Single line declarations are preferred but variables declared in the same line can also be used example:  
+int variable1;  
+int variable2;  
+or  
+int variable1, variable2;  
 
-Declarations should also be put at the beginning of blocks. 
+Declarations should also be put at the beginning of blocks.  
 
 ##### 3.1. Class and interface declarations
-Open brace appears at the end of the same line as the declaration statement.
-Closing brace starts a line by itself, indented to match its opening statement.
-example:
-public static void printBoard() {
-	for(int i = 0; i < 3; i++) {
+Open brace appears at the end of the same line as the declaration statement.  
+Closing brace starts a line by itself, indented to match its opening statement.  
+Example:  
+	public static void printBoard() {  
+		for(int i = 0; i < 3; i++) {  
+		}  
 	}
-}
 
 ### 4. Statements
 ##### 4.1. If-else statements
-If-else statements statements should have the following form:
-if (condition) { 
-statements;
- } 
-else { 
-statements; 
-}
+If-else statements statements should have the following form:  
+	if (condition) {  
+		statements;  
+	}  
+	else {  
+		statements;  
+	}
 
 ##### 4.2. for statements
-For statements should have the following form:
-for (initialization; condition; update) { 
-statements; 
-}
+For statements should have the following form:  
+	for (initialization; condition; update) {  
+		statements;  
+	}  
 
 ##### 4.3. While and do-while statements
-While statements should have the following form:
-	while (condition) { 
-statements; 
-}
+While statements should have the following form:  
+	while (condition) {   
+		statements;   
+	}  
 
-Do-while statements should have the following form:
-do { 
-statements; 
-} 
-while (condition);
+Do-while statements should have the following form:  
+	do {  
+		statements;  
+	}  
+	while (condition);  
 
-##### 4.4. Try-catch statements
-Try-catch statements should have the following form:
-	try { 
-statements; 
-} 
-catch (ExceptionClass e) { 
-statements; 
-}
+##### 4.4. Try-catch statements  
+Try-catch statements should have the following form:  
+	try {  
+		statements;  
+	}  
+	catch (ExceptionClass e) {  
+		statements;  
+	}  
