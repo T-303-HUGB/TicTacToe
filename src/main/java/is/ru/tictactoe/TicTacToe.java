@@ -17,7 +17,7 @@ public class TicTacToe {
 		currentPlayer = player1;
 	}
 
-	//Create game with two players
+	// Create game with two players
 	public TicTacToe(String s1, String s2) {
 		board = new char[3][3];
 		clearBoard();
@@ -27,7 +27,7 @@ public class TicTacToe {
 		currentPlayer = player1;
 	}
 
-	//Create game with player against computer
+	// Create game with player against computer
 	public TicTacToe(String s1) {
 		board = new char[3][3];
 		clearBoard();

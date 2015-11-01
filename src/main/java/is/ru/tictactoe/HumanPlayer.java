@@ -8,6 +8,7 @@ public class HumanPlayer extends Player {
 		super(name, marker);
 	}
 
+	// Get input from player, validation for invalid input.
 	public Coordinates getMove(char[][] board) {
 		Scanner input = new Scanner(System.in);
 		int x;
