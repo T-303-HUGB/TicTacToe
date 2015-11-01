@@ -10,5 +10,9 @@ bin/package
 test -f /tmp/${APP} && rm -r /tmp/${APP}
 cp -r build/install/${APP} /tmp
 
+# markdown to html
+cp -f docs/* src/markdown
+./gradlew markdownToHtml
+
 # Run application once
 /tmp/${APP}/bin/${APP}

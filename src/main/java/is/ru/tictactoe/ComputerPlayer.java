@@ -24,13 +24,27 @@ public class ComputerPlayer extends Player {
 		else if(!checkDiagonal(board).equals(invalidMove)) {
 			return checkDiagonal(board);
 		}
+		else {
+			return getRandomCoord(board);
+		}
 
 
+	// Get random coordinates from computer.
+	// Validation for the location having to be empty, or computer tries again.
+	private Coordinates getRandomCoord(char[][] board) {
 		Random rand = new Random();
-		int  n = rand.nextInt(2);
-		int b = rand.nextInt(2);
+		int x = -1, y = -1;
+		while(true) {
+			x = rand.nextInt(3);
+			y = rand.nextInt(3);
+			
+			if(board[x][y] == ' ') {
+				board[x][y] = super.marker;
+				break;
+			}
+		}
 
-		Coordinates move = new Coordinates(n,b);
+		Coordinates move = new Coordinates(x,y);
 
 		return move;
 	}
@@ -62,6 +76,7 @@ public class ComputerPlayer extends Player {
 			}
 		}
 
+<<<<<<< HEAD
 		move = new Coordinates(3,3);
 
 		return move;
@@ -73,23 +88,41 @@ public class ComputerPlayer extends Player {
 		//Check if computer can win on 3 row
 		for(int i = 0; i <= 2; i++) {
 			if(board[i][0] == board[i][1] && board[i][0] == super.marker && board[i][2] == ' ') {
+=======
+		// Check if computer can win on 3 row
+		for(int i = 0; i < 2; i++) {
+			if(board[i][0] == board[i][1] && board[i][0] == mark && board[i][2] == ' ') {
+>>>>>>> 3a357af682362094585ec4b98b51a9aa255b2d04
 				move = new Coordinates(i,2);
 				return move;
 			}
 		}
 
+<<<<<<< HEAD
 		//Check if computer can win on 2 row
 		for(int i = 0; i <= 2; i++) {
 			if(board[i][0] == board[i][2] && board[i][0] == super.marker && board[i][1] == ' ') {
+=======
+		// Check if computer can win on 2 row
+		for(int i = 0; i < 2; i++) {
+			if(board[i][0] == board[i][2] && board[i][0] == mark && board[i][1] == ' ') {
+>>>>>>> 3a357af682362094585ec4b98b51a9aa255b2d04
 				move = new Coordinates(i,1);
 				return move;
 			}
 		}
 
+<<<<<<< HEAD
 		//Check if computer can win on 1 row
 		for(int i = 0; i <= 2; i++) {
 			if(board[i][1] == board[i][2] && board[i][1] == super.marker && board[i][0] == ' ') {
 				move = new Coordinates(i,0);
+=======
+		// Check if computer can win on 1 row
+		for(int i = 0; i < 2; i++) {
+			if(board[i][1] == board[i][2] && board[i][1] == mark && board[i][0] == ' ') {
+				move = new Coordinates(0,i);
+>>>>>>> 3a357af682362094585ec4b98b51a9aa255b2d04
 				return move;
 			}
 		}
