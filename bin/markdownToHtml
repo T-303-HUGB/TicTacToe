@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# copy the markdown files so they can be converted to html
+cp -f docs/*.md src/markdown
+
+# convert the markdown to html
+./gradlew markdownToHtml
+
+# copy the html to docs
+cp -f build/gen-html/*.html docs

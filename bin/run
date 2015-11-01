@@ -1,4 +1,4 @@
 #!/bin/bash
 
 #./gradlew run
-/tmp/TicTacToe/bin/TicTacToe
+java -jar build/libs/TicTacToe.jar
