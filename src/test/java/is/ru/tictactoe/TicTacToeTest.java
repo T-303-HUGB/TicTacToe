@@ -45,16 +45,16 @@ public class TicTacToeTest {
 
         coord = new Coordinates(1,0);
         game.playersTurn(coord);
-        coord = new Coordinates(1,1);
-        game.playersTurn(coord);
         coord = new Coordinates(1,2);
         game.playersTurn(coord);
-        
-        coord = new Coordinates(2,0);
+        coord = new Coordinates(1,1);
         game.playersTurn(coord);
+        
         coord = new Coordinates(2,1);
         game.playersTurn(coord);
         coord = new Coordinates(2,2);
+        game.playersTurn(coord);
+        coord = new Coordinates(2,0);
         game.playersTurn(coord);
         
         assertEquals(3, game.checkForWin());
