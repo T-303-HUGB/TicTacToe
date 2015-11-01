@@ -26,17 +26,149 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void checkHorizontalTest() {
-        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'X');
-        Coordinates coord = new Coordinates(0,0);
-        Coordinates coordH = new Coordinates(2,2);
-        Coordinates coord2 = new Coordinates(0,1);
-        Coordinates coord3 = new Coordinates(0,2);
-        TicTacToe game = new TicTacToe();
-        game.playersTurn(coord);
-        game.playersTurn(coordH); //To get o turn
-        game.playersTurn(coord2);
+    public void checkSuperMarker() {
+        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
 
-        assertEquals(true, coord3.equals(P1.checkHorizontal(game.getBoard())));
+        assertEquals('o', P1.checkMarker());
+    }
+
+    @Test
+    public void checkHorizontalTest() {
+        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
+        TicTacToe game = new TicTacToe("Kakli");
+
+        Coordinates coord = new Coordinates(0,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(0,1);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(1,2);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(2,1);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(2,2);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(1,1);
+
+        assertEquals(true, coord.equals(P1.checkHorizontal(game.getBoard())));
+    }
+
+    @Test
+    public void checkHorizontal2Test() {
+        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
+        TicTacToe game = new TicTacToe("Kakli");
+
+        Coordinates coord = new Coordinates(0,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(2,2);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(2,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(1,2);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(1,1);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(0,2);
+
+        assertEquals(true, coord.equals(P1.checkHorizontal(game.getBoard())));
+    }
+
+    @Test
+    public void checkHorizontal3Test() {
+        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
+        TicTacToe game = new TicTacToe("Kakli");
+
+        Coordinates coord = new Coordinates(2,2);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(0,0);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(2,1);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(1,0);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(1,1);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(2,0);
+
+        assertEquals(true, coord.equals(P1.checkHorizontal(game.getBoard())));
+    }
+
+    @Test
+    public void checkVerticalTest() {
+        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
+        TicTacToe game = new TicTacToe("Kakli");
+
+        Coordinates coord = new Coordinates(1,2);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(0,0);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(1,1);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(0,1);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(2,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(0,2);
+
+        assertEquals(true, coord.equals(P1.checkVertical(game.getBoard())));
+    }
+
+    @Test
+    public void checkVerticalTest2() {
+        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
+        TicTacToe game = new TicTacToe("Kakli");
+
+        Coordinates coord = new Coordinates(0,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(1,0);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(2,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(1,2);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(0,2);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(1,1);
+
+        assertEquals(true, coord.equals(P1.checkVertical(game.getBoard())));
+    }
+
+    @Test
+    public void checkVerticalTest3() {
+        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
+        TicTacToe game = new TicTacToe("Kakli");
+
+        Coordinates coord = new Coordinates(0,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(2,1);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(0,1);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(2,2);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(1,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(2,0);
+
+        assertEquals(true, coord.equals(P1.checkVertical(game.getBoard())));
+    }
+
+    @Test
+    public void checkDiagonalTest() {
+        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
+        TicTacToe game = new TicTacToe("Kakli");
+
+        Coordinates coord = new Coordinates(1,0);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(0,0);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(0,1);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(1,1);
+        game.playersTurn(coord); //To get o turn
+        coord = new Coordinates(2,1);
+        game.playersTurn(coord); //To get x turn
+        coord = new Coordinates(2,2);
+
+        assertEquals(true, coord.equals(P1.checkDiagonal(game.getBoard())));
     }
 }
