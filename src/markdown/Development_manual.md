@@ -5,9 +5,10 @@ This is a manual for new members of the development team. In the manual you will
 1. The following programs are needed to run the program
 	* Git
 	* Java JDK 8
-	* Gradle - This is not needed because we have Gradle Wrapper already in our project.
+	* Gradle - This is not needed because we have Gradle Wrapper already in our project, however you will need to write the following command to make the wrapper executable after cloning: chmod +x gradlew
 2. How to run the program
 	* Use the following command to clone the repository to your computer - git clone https://github.com/T-303-HUGB/TicTacToe.git
+	* To make the scripts executable write the following: cd bin "press enter, then write" chmod +x *
 	* To compile build and run the program write this in the command line: sh ./bin/deploy
 	* To explore more gradle commands you can type in the following: ./gradlew task
 

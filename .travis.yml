@@ -3,5 +3,21 @@ language: java
 jdk:
 - oraclejdk8
 
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   # via the "travis encrypt" command using the project repo's public key
+   - secure: "vbu9J4EVoGjGZYga5lcIa9ihskgzIkAFCp4JrAzczn+k0+H8LcNsVYab2a/46LxjQ2C8CnwDq9M72R0yuYHQyVMYthJhLiYerrkBzdJ8Eh0chi5wBQPEXtHgZyi0plqkoroQ8WqHKAlpPjJq1VAk+qfSPvDy5dfZNjaOO/LB6xJQAO92zLk7TKvPbqjEUpKamm2beRGY+ZJCLXpjQWDPSk58cd6IBx+u9kG5VN6pjBrf6McTGMYeSMLubSqpodiSNkVEQjZ8DOiuJLAekhMYdIkliMQxny4FDauPbwaTlRlDOkaSxWxswptYLVcjfmlMG8H6Fp+D+sd5PLL5enTqmEpbZUZAS8W1jc9KznSDvXkDlcx+FPpRfs9ZizWqQvBVCqO9lA4FNqUj0rgPDX1AoZjo8uHdO3BmKuC2U+HeYMGq5+uUsdN6yE9nM2vDSLM2qJdnicdkF/iNiTe6qiFTjUW+vo15SLp0FGYPC7nWhr5QVeunHqiYU9Agl4j2E6NIu+PPC9jRwMUoJXaDJEer60KD0+Q8pGM79XB3Tjz11o5299AvTQOi/WRYhW4Cmhb0EAmLwDs/11yp4eWfNzgChbqknQ50tp7tW7xXcCr1YdxyXCzal8efUyRIc7YFGLeM61+8tO3Rr/4AF3pqgKzTjM3fhXm6MzG4o6J1r0m0bdA="
+
+addons:
+  coverity_scan:
+    project:
+      name: "T-303-HUGB/TicTacToe"
+      description: "TicTacToe game"
+    notification_email: bjorni14@ru.is
+    build_command_prepend: "./gradlew clean"
+    build_command:   "./gradlew build"
+    branch_pattern: coverity_scan
+	
 before_install:
 - chmod +x gradlew
