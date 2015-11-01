@@ -5,7 +5,7 @@ We will be making a simple edition of the game Tic tac toe where two players can
 The game will be coded using Sublime Text and github will be used as source control to store and share the code between team members. We will be using gradle to make compiling, running tests and deploying easier. Travis will also run tests and display the current status of branches on their website so team members can see easily. The Advania Qstack server will be used to run the program on a clean computer.
 
 ## Classes
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/ "TicTacToe class diagram")
+![alt text](https://github.com/T-303-HUGB/TicTacToe/blob/master/docs/ClassDiagramTicTacToe.png "TicTacToe class diagram")
 
 ## Programming Rules
 ### 1. Indentation
@@ -28,7 +28,7 @@ int variable1, variable2;
 
 Declarations should also be put at the beginning of blocks. 
 
-#### Class and interface declarations
+##### 3.1. Class and interface declarations
 Open brace appears at the end of the same line as the declaration statement.
 Closing brace starts a line by itself, indented to match its opening statement.
 example:
@@ -38,7 +38,7 @@ public static void printBoard() {
 }
 
 ### 4. Statements
-#### If-else statements
+##### 4.1. If-else statements
 If-else statements statements should have the following form:
 if (condition) { 
 statements;
@@ -47,13 +47,13 @@ else {
 statements; 
 }
 
-#### for statements
+##### 4.2. for statements
 For statements should have the following form:
 for (initialization; condition; update) { 
 statements; 
 }
 
-#### While and do-while statements
+##### 4.3. While and do-while statements
 While statements should have the following form:
 	while (condition) { 
 statements; 
@@ -65,7 +65,7 @@ statements;
 } 
 while (condition);
 
-#### Try-catch statements
+##### 4.4. Try-catch statements
 Try-catch statements should have the following form:
 	try { 
 statements; 
