@@ -1,10 +1,10 @@
 ## Introduction
-We will be making a simple edition of the game Tic tac toe where two players can compete against each other. The game will be played on the console and players take turns typing in x or o until either of them win or there will be a tie if neither of them can put three in a row horizontal, vertical or diagonal.
+We will be making a simple edition of the game Tic tac toe where two players can compete against each other or against the computer. The game will be played on the console and players take turns typing in x or o until either of them win or there will be a tie if neither of them can put three in a row horizontal, vertical or diagonal.
 
 ## Environment
 The game will be coded using Sublime Text and Github will be used as source control to store and share the code between team members. We will be using Gradle to make compiling, running tests and deploying easier. Travis is used as automated continuous integration server. The Advania Qstack server will be used to run the program on a clean computer.
 
-## Classes
+## Class diagram
 ![alt text](https://github.com/T-303-HUGB/TicTacToe/blob/master/docs/ClassDiagramTicTacToe.png "TicTacToe class diagram")
 
 ## Programming Rules
