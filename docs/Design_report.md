@@ -2,7 +2,7 @@
 We will be making a simple edition of the game Tic tac toe where two players can compete against each other. The game will be played on the console and players take turns typing in x or o until either of them win or there will be a tie if neither of them can put three in a row horizontal, vertical or diagonal.
 
 ## Environment
-The game will be coded using Sublime Text and github will be used as source control to store and share the code between team members. We will be using gradle to make compiling, running tests and deploying easier. Travis will also run tests and display the current status of branches on their website so team members can see easily. The Advania Qstack server will be used to run the program on a clean computer.
+The game will be coded using Sublime Text and Github will be used as source control to store and share the code between team members. We will be using Gradle to make compiling, running tests and deploying easier. Travis is used as automated continuous integration server. The Advania Qstack server will be used to run the program on a clean computer.
 
 ## Classes
 ![alt text](https://github.com/T-303-HUGB/TicTacToe/blob/master/docs/ClassDiagramTicTacToe.png "TicTacToe class diagram")
@@ -32,44 +32,44 @@ Declarations should also be put at the beginning of blocks.
 Open brace appears at the end of the same line as the declaration statement.  
 Closing brace starts a line by itself, indented to match its opening statement.  
 Example:  
-	public static void printBoard() {  
-		for(int i = 0; i < 3; i++) {  
-		}  
-	}
+public static void printBoard() {  
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i < 3; i++) {  
+&nbsp;&nbsp;&nbsp;&nbsp;}  
+}
 
 ### 4. Statements
 ##### 4.1. If-else statements
 If-else statements statements should have the following form:  
-	if (condition) {  
-		statements;  
-	}  
-	else {  
-		statements;  
-	}
+if (condition) {  
+&nbsp;&nbsp;&nbsp;&nbsp;statements;  
+}  
+else {  
+&nbsp;&nbsp;&nbsp;&nbsp;statements;  
+}
 
 ##### 4.2. for statements
 For statements should have the following form:  
-	for (initialization; condition; update) {  
-		statements;  
-	}  
+for (initialization; condition; update) {  
+&nbsp;&nbsp;&nbsp;&nbsp;statements;  
+}  
 
 ##### 4.3. While and do-while statements
 While statements should have the following form:  
-	while (condition) {   
-		statements;   
-	}  
+while (condition) {   
+&nbsp;&nbsp;&nbsp;&nbsp;statements;   
+}  
 
 Do-while statements should have the following form:  
-	do {  
-		statements;  
-	}  
-	while (condition);  
+do {  
+&nbsp;&nbsp;&nbsp;&nbsp;statements;  
+}  
+while (condition);  
 
 ##### 4.4. Try-catch statements  
 Try-catch statements should have the following form:  
-	try {  
-		statements;  
-	}  
-	catch (ExceptionClass e) {  
-		statements;  
-	}  
+try {  
+&nbsp;&nbsp;&nbsp;&nbsp;statements;  
+}  
+catch (ExceptionClass e) {  
+&nbsp;&nbsp;&nbsp;&nbsp;statements;  
+}  
