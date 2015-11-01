@@ -13,7 +13,7 @@ public class Game {
 		TicTacToe game = new TicTacToe();
 		System.out.println("Input type of game:");
 		System.out.println("1: Player against player");
-		System.out.println("2: Player again Computer");
+		System.out.println("2: Player against Computer");
 		while(true) {
 			type = Integer.parseInt(input.nextLine());
 

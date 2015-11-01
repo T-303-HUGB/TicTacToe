@@ -11,18 +11,9 @@ public class ComputerPlayerTest {
 
     @Test
     public void getNameTest() {
-    	ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'O');
+    	ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'o');
 
     	assertEquals("HAL9000", P1.getName());
-    }
-
-    @Test
-    public void checkHorizontalFailureTest() {
-        ComputerPlayer P1 = new ComputerPlayer("HAL9000", 'X');
-        Coordinates coord = new Coordinates(3,3);
-        char[][] board = new char[3][3];
-
-        assertEquals(true, coord.equals(P1.checkHorizontal(board)));
     }
 
     @Test
@@ -49,7 +40,7 @@ public class ComputerPlayerTest {
         game.playersTurn(coord); //To get x turn
         coord = new Coordinates(1,1);
 
-        assertEquals(true, coord.equals(P1.checkHorizontal(game.getBoard())));
+        assertEquals(true, coord.equals(P1.getMove(game.getBoard())));
     }
 
     @Test
@@ -69,7 +60,7 @@ public class ComputerPlayerTest {
         game.playersTurn(coord); //To get x turn
         coord = new Coordinates(0,2);
 
-        assertEquals(true, coord.equals(P1.checkHorizontal(game.getBoard())));
+        assertEquals(true, coord.equals(P1.getMove(game.getBoard())));
     }
 
     @Test
@@ -89,7 +80,7 @@ public class ComputerPlayerTest {
         game.playersTurn(coord); //To get x turn
         coord = new Coordinates(2,0);
 
-        assertEquals(true, coord.equals(P1.checkHorizontal(game.getBoard())));
+        assertEquals(true, coord.equals(P1.getMove(game.getBoard())));
     }
 
     @Test
@@ -109,7 +100,7 @@ public class ComputerPlayerTest {
         game.playersTurn(coord); //To get x turn
         coord = new Coordinates(0,2);
 
-        assertEquals(true, coord.equals(P1.checkVertical(game.getBoard())));
+        assertEquals(true, coord.equals(P1.getMove(game.getBoard())));
     }
 
     @Test
@@ -129,7 +120,7 @@ public class ComputerPlayerTest {
         game.playersTurn(coord); //To get x turn
         coord = new Coordinates(1,1);
 
-        assertEquals(true, coord.equals(P1.checkVertical(game.getBoard())));
+        assertEquals(true, coord.equals(P1.getMove(game.getBoard())));
     }
 
     @Test
@@ -149,7 +140,7 @@ public class ComputerPlayerTest {
         game.playersTurn(coord); //To get x turn
         coord = new Coordinates(2,0);
 
-        assertEquals(true, coord.equals(P1.checkVertical(game.getBoard())));
+        assertEquals(true, coord.equals(P1.getMove(game.getBoard())));
     }
 
     @Test
@@ -169,6 +160,6 @@ public class ComputerPlayerTest {
         game.playersTurn(coord); //To get x turn
         coord = new Coordinates(2,2);
 
-        assertEquals(true, coord.equals(P1.checkDiagonal(game.getBoard())));
+        assertEquals(true, coord.equals(P1.getMove(game.getBoard())));
     }
 }
