@@ -14,12 +14,19 @@ public class ComputerPlayer extends Player {
 		/*if(checkHorizontal(board) != invalidMove) {
 			return checkHorizontal(board);
 		}*/
-
 		Random rand = new Random();
-		int  n = rand.nextInt(2);
-		int b = rand.nextInt(2);
+		int x = -1, y = -1;
+		while(true) {
+			x = rand.nextInt(3);
+			y = rand.nextInt(3);
+			
+			if(board[x][y] == ' ') {
+				board[x][y] = super.marker;
+				break;
+			}
+		}
 
-		Coordinates move = new Coordinates(n,b);
+		Coordinates move = new Coordinates(x,y);
 
 		return move;
 	}

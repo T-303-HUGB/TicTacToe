@@ -37,7 +37,7 @@ public class TicTacToe {
 		currentPlayer = player1;
 	}
 
-	private void clearBoard() {
+	public void clearBoard() {
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
 				board[i][j] = ' ';
@@ -80,6 +80,14 @@ public class TicTacToe {
 		return currentPlayer.getName();
 	}
 
+	public Player getPlayer1() {
+		return player1;
+	}
+
+	public Player getPlayer2() {
+		return player2;
+	}
+
 	public Player getCurrentPlayer() {
 		return currentPlayer;
 	}
@@ -90,6 +98,12 @@ public class TicTacToe {
 
 
 	public void playersTurn(Coordinates coords) {
+		 //System.out.println(WhoseTurnIsIt() + " it's your turn!");
+		 board[coords.x()][coords.y()] = currentPlayer.marker;
+		 switchPlayer();
+	}
+
+	public void validCoord(Coordinates coords) {
 		 //System.out.println(WhoseTurnIsIt() + " it's your turn!");
 		 board[coords.x()][coords.y()] = currentPlayer.marker;
 		 switchPlayer();

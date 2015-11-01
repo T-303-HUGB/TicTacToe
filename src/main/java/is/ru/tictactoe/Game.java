@@ -35,24 +35,41 @@ public class Game {
 			}
 		}
 
-		int win = 0;
-		while(win == 0) {
-			game.printBoard();
-			System.out.println(game.WhoseTurnIsIt() + " it's your turn!");
-			Player player = game.getCurrentPlayer();
-			Coordinates coords = player.getMove(game.getBoard());
-			game.playersTurn(coords);
-			win = game.checkForWin();
-		}
 
-		if(win == 1) {
-			System.out.println("Player1 won");
-		}
-		else if(win == 2) {
-			System.out.println("Player2 won");
-		}
-		else if(win == 3) {
-			System.out.println("Sorry there was no winner");
+		Player p1 = game.getPlayer1();
+		Player p2 = game.getPlayer2();
+		char again = 'y';
+		while(again == 'y' || again == 'Y') {
+			game.clearBoard();
+			int win = 0;
+			while(win == 0) {
+				game.printBoard();
+				System.out.println(game.WhoseTurnIsIt() + " it's your turn!");
+				Player player = game.getCurrentPlayer();
+				Coordinates coords = player.getMove(game.getBoard());
+				game.playersTurn(coords);
+				win = game.checkForWin();
+			}
+
+			game.printBoard();
+			if(win == 1) {
+				System.out.println(p1.getName() + " won");
+				game.getPlayer1().playerWon();
+			}
+			else if(win == 2) {
+				System.out.println(p2.getName() + " won");
+				game.getPlayer2().playerWon();
+			}
+			else if(win == 3) {
+				System.out.println("Game ends in a tie");
+			}
+
+			System.out.println("Current score:");
+			System.out.println(p1.getName() + ": " + game.getPlayer1().getNumberOfWins());
+			System.out.println(p2.getName() + ": " + game.getPlayer2().getNumberOfWins());
+
+			System.out.print("Want to play again (y/Y)? ");
+			again = input.next(".").charAt(0);
 		}
 		
 		
