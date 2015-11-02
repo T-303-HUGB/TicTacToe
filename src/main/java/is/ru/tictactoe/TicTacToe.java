@@ -76,7 +76,7 @@ public class TicTacToe {
 		return true;
 	}
 
-	public String WhoseTurnIsIt() {
+	public String whoseTurnIsIt() {
 		return currentPlayer.getName();
 	}
 
@@ -156,13 +156,11 @@ public class TicTacToe {
 
 		for(int y = 0; y < 3; y++) {
 			if(board[0][y] == board[1][y] && board[1][y] == board[2][y]) {
-				if(board[0][y] != ' ') {
-					if(board[0][y] == 'x') {
+				if(board[0][y] == 'x') {
 						return 1;
-					}
-					else {
+				}
+				else if(board[0][y] == 'o') {
 						return 2;
-					}
 				}
 			}
 		}
@@ -174,13 +172,11 @@ public class TicTacToe {
 
 		for(int x = 0; x < 3; x++) {
 			if(board[x][0] == board[x][1] && board[x][1] == board[x][2]) {
-				if(board[x][0] != ' ') {
-					if(board[x][0] == 'x') {
+				if(board[x][0] == 'x') {
 						return 1;
-					}
-					else {
+				}
+				else if(board[x][0] == 'o') {
 						return 2;
-					}
 				}
 			}
 		}
@@ -191,24 +187,20 @@ public class TicTacToe {
 	private int checkDiagonal() {
 
 		if(board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
-			if(board[0][0] != ' ') {
-					if(board[0][0] == 'x') {
-						return 1;
-					}
-					else {
-						return 2;
-					}
+			if(board[0][0] == 'x') {
+				return 1;
+			}
+			else if(board[0][0] == 'o') {
+				return 2;
 			}
 		}
 
 		if(board[2][0] == board[1][1] && board[1][1] == board[0][2]) {
-			if(board[2][0] != ' ') {
-					if(board[2][0] == 'x') {
-						return 1;
-					}
-					else {
-						return 2;
-					}
+			if(board[2][0] == 'x') {
+				return 1;
+			}
+			else if(board[2][0] == 'o') {
+				return 2;
 			}
 		}
 

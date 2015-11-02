@@ -10,11 +10,11 @@ public class TicTacToeTest {
     }
 
     @Test
-    public void WhoseTurnItIsTest(){
+    public void whoseTurnItIsTest(){
         TicTacToe game = new TicTacToe();
 
         // player 1 should start
-        assertEquals("Player 1", game.WhoseTurnIsIt());
+        assertEquals("Player 1", game.whoseTurnIsIt());
     }
 
     @Test
@@ -23,7 +23,7 @@ public class TicTacToeTest {
         Coordinates coord = new Coordinates(1,1);
         game.playersTurn(coord);
 
-        assertEquals("Player 2", game.WhoseTurnIsIt());
+        assertEquals("Player 2", game.whoseTurnIsIt());
     }
 
     @Test
