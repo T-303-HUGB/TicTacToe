@@ -8,7 +8,8 @@ public class Game {
 	// agains a friend or against the computer
 	private static TicTacToe gameType() {
 		Scanner input = new Scanner(System.in);
-		String s1, s2;
+		String s1;
+		String s2;
 		int type;
 		TicTacToe game = new TicTacToe();
 		System.out.println("Input type of game:");
@@ -44,7 +45,7 @@ public class Game {
 		int win = 0;
 		while(win == 0) {
 			game.printBoard();
-			System.out.println(game.WhoseTurnIsIt() + " it's your turn!");
+			System.out.println(game.whoseTurnIsIt() + " it's your turn!");
 			Player player = game.getCurrentPlayer();
 			Coordinates coords = player.getMove(game.getBoard());
 			game.playersTurn(coords);

@@ -54,7 +54,8 @@ public class ComputerPlayer extends Player {
 	// Validation for the location having to be empty, or computer tries again.
 	private Coordinates getRandomCoord(char[][] board) {
 		Random rand = new Random();
-		int x = -1, y = -1;
+		int x = -1;
+		int y = -1;
 		while(true) {
 			x = rand.nextInt(3);
 			y = rand.nextInt(3);
@@ -155,17 +156,17 @@ public class ComputerPlayer extends Player {
 			return move;
 		}
 
-		if(board[0][2] == board[1][1] && board[0][2] == super.marker && board[2][0] == ' ') {
+		if(board[0][2] == board[1][1] && board[0][2] == mark && board[2][0] == ' ') {
 			move = new Coordinates(2,0);
 			return move;
 		}
 
-		if(board[0][2] == board[2][0] && board[0][2] == super.marker && board[1][1] == ' ') {
+		if(board[0][2] == board[2][0] && board[0][2] == mark && board[1][1] == ' ') {
 			move = new Coordinates(1,1);
 			return move;
 		}
 
-		if(board[1][1] == board[2][0] && board[1][1] == super.marker && board[0][2] == ' ') {
+		if(board[1][1] == board[2][0] && board[1][1] == mark && board[0][2] == ' ') {
 			move = new Coordinates(0,2);
 			return move;
 		}
