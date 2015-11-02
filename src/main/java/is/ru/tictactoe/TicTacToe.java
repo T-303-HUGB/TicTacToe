@@ -96,13 +96,6 @@ public class TicTacToe {
 
 
 	public void playersTurn(Coordinates coords) {
-		 //System.out.println(WhoseTurnIsIt() + " it's your turn!");
-		 board[coords.x()][coords.y()] = currentPlayer.marker;
-		 switchPlayer();
-	}
-
-	public void validCoord(Coordinates coords) {
-		 //System.out.println(WhoseTurnIsIt() + " it's your turn!");
 		 board[coords.x()][coords.y()] = currentPlayer.marker;
 		 switchPlayer();
 	}
