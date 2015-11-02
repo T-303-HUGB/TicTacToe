@@ -2,13 +2,13 @@ package is.ru.tictactoe;
 
 public class TicTacToe {
 
-	private static char[][] board;
+	private char[][] board;
 	private Player player1, player2;
 	private Player currentPlayer;
 
 	public TicTacToe() {
 		board = new char[3][3];
-		clearBoard();
+		clearBoard(board);
 
 		player1 = new HumanPlayer("Player 1", 'x');
 		player2 = new HumanPlayer("Player 2", 'o');
@@ -18,7 +18,7 @@ public class TicTacToe {
 	// Create game with two players
 	public TicTacToe(String s1, String s2) {
 		board = new char[3][3];
-		clearBoard();
+		clearBoard(board);
 
 		player1 = new HumanPlayer(s1, 'x');
 		player2 = new HumanPlayer(s2, 'o');
@@ -28,14 +28,14 @@ public class TicTacToe {
 	// Create game with player against computer
 	public TicTacToe(String s1) {
 		board = new char[3][3];
-		clearBoard();
+		clearBoard(board);
 
 		player1 = new HumanPlayer(s1, 'x');
 		player2 = new ComputerPlayer("Computer", 'o');
 		currentPlayer = player1;
 	}
 
-	public void clearBoard() {
+	public void clearBoard(char[][] board) {
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
 				board[i][j] = ' ';
@@ -43,7 +43,7 @@ public class TicTacToe {
 		}
 	}
 
-	public static void printBoard() {
+	public static void printBoard(char[][] board) {
 		System.out.println();
 
 		for(int i = 0; i < 3; i++) {

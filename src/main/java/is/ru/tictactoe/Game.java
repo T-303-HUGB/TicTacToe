@@ -44,7 +44,7 @@ public class Game {
 	private static int playGame(TicTacToe game) {
 		int win = 0;
 		while(win == 0) {
-			game.printBoard();
+			game.printBoard(game.getBoard());
 			System.out.println(game.whoseTurnIsIt() + " it's your turn!");
 			Player player = game.getCurrentPlayer();
 			Coordinates coords = player.getMove(game.getBoard());
@@ -85,13 +85,13 @@ public class Game {
 
 		char again = 'y';
 		while(again == 'y' || again == 'Y') {
-			game.clearBoard();
+			game.clearBoard(game.getBoard());
 			int win = playGame(game);
-			game.printBoard();
+			game.printBoard(game.getBoard());
 			winner(win, game, p1,p2);
 			currentScore(game);
 			
-			System.out.print("Want to play again, press y for yes, press any other key for no");
+			System.out.print("Want to play again, press y for yes, press any other key for no: ");
 			again = input.next(".").charAt(0);
 		}
 		
