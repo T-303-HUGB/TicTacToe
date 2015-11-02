@@ -7,6 +7,9 @@ The game will be coded using Sublime Text and Github will be used as source cont
 ## Class diagram
 ![alt text](https://github.com/T-303-HUGB/TicTacToe/blob/master/docs/ClassDiagramTicTacToe.png "TicTacToe class diagram")
 
+## How the game works
+
+
 ## Programming Rules
 ### 1. Indentation
 A single tab should be used as the unit of indentation.
