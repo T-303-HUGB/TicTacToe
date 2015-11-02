@@ -1,7 +1,5 @@
 package is.ru.tictactoe;
 
-import static java.lang.System.out;
-
 public class TicTacToe {
 
 	private static char[][] board;
@@ -110,7 +108,7 @@ public class TicTacToe {
 	}
 
 	public void switchPlayer() {
-		 if(currentPlayer == player1) {
+		 if(currentPlayer.equals(player1)) {
 		 	currentPlayer = player2;
 		 }
 		 else {

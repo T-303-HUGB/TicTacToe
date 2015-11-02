@@ -70,7 +70,7 @@ public class Game {
 	}
 
 	// Prints out the current win score of both players.
-	private static void currentScore(TicTacToe game, Player p1, Player p2) {
+	private static void currentScore(TicTacToe game) {
 		System.out.println("Current score:");
 		System.out.println(game.getPlayer1().getName() + ": " + game.getPlayer1().getNumberOfWins());
 		System.out.println(game.getPlayer2().getName() + ": " + game.getPlayer2().getNumberOfWins());
@@ -89,9 +89,9 @@ public class Game {
 			int win = playGame(game);
 			game.printBoard();
 			winner(win, game, p1,p2);
-			currentScore(game, p1, p2);
+			currentScore(game);
 			
-			System.out.print("Want to play again (y/Y)? ");
+			System.out.print("Want to play again, press y for yes, press any other key for no");
 			again = input.next(".").charAt(0);
 		}
 		
